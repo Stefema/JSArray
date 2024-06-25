@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Array</title>
+  </head>
+  <body>
+    <script>
+      let initialValues = [1, 40, 5, "Ion", true, undefined, null];
+      console.log(initialValues);
+
+      let otherValues = [2, 7, 91.5, "Vasile", "Maria", false, null, undefined];
+
+      console.log(otherValues);
+
+      initialValues.push(...otherValues);
+      console.log(initialValues);
+
+      let initialValuesmodified = initialValues.map(function (element) {
+        if (typeof element === "number") {
+          return element * 2;
+        }
+      });
+      console.log(initialValuesmodified);
+
+      let sortedInitialValuesmodified = initialValuesmodified.sort((a, b) => {
+        return a - b;
+      });
+      console.log(sortedInitialValuesmodified);
+
+      let stringToBeConcatenated = " " + "happy coding";
+      let finalValues = initialValues.map(function (element) {
+        if (typeof element === "string") {
+          return element + stringToBeConcatenated;
+        }
+      });
+      console.log(finalValues);
+
+      let booleanedValues = initialValues.map(function (element) {
+        if (typeof element === "boolean") {
+          return !element;
+        }
+      });
+      console.log(booleanedValues);
+    </script>
+  </body>
+</html>
